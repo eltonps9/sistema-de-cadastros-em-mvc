@@ -1,0 +1,36 @@
+input {
+    width: 350px;
+    height: 30px;
+    padding-left: 15px;
+    border-radius: 8px;
+    border: 1px solid rgb(68, 68, 68);
+}
+
+.juncao_int>input {
+    width: 80%;
+}
+
+.juncao_int4>input {
+    background-color: rgb(49, 223, 14);
+}
+
+.juncaoEst1>input {
+    width: 450px;
+}
+
+.juncaoEst4>input {
+    background-color: rgb(49, 223, 14);
+}
+
+
+/*  efeito hover  */
+
+.juncaoEst4>input:hover {
+    background-color: rgb(78, 255, 43);
+    color: rgb(255, 255, 255);
+}
+
+.juncao_int4>input:hover {
+    background-color: rgb(78, 255, 43);
+    color: rgb(255, 255, 255);
+}
