@@ -12,7 +12,7 @@ table {
 }
 
 table>#linha {
-    color: rgb(255, 255, 255);
+    color: white;
     height: 23px;
     color: black;
     border: 1px solid black;
@@ -24,4 +24,31 @@ td {
     border: 1px solid black;
     color: black;
     background-color: white;
+}
+
+.head {
+    width: 85%;
+    height: 70px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.head>.quantia {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head>.quantia>img {
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+}
+
+.linha {
+    background-color: rgb(100, 100, 100);
 }

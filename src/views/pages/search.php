@@ -32,16 +32,19 @@
                             </select>
                         <input type="submit" value="pesquisar">
                     </form>
-                   <strong>
-                    <?php 
-                    if($_SESSION['search']==true){
-                        echo $_SESSION['search'];
-                        $_SESSION['search']="";
-                   }?>
-                   </strong>
+
+                    <!-- se nao existir o que foi pesquisado -->
+                    <strong>
+                        <?php 
+                        if(!empty($_SESSION['search'])){
+                            echo $_SESSION['search'];
+                            $_SESSION['search']="";
+                        }?>
+                    </strong>
+
                     <?php 
                         
-                        if($searching==true):
+                        if(!empty($searching)):
                     ?>  
                          
                         <nav id="container">
@@ -66,6 +69,7 @@
                             <?php endforeach; ?>
                             </table>                         
                         </nav>
+                    
                     <?php endif;?>
 
                 </section> 

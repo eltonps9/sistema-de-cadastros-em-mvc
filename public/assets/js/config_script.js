@@ -1,24 +1,21 @@
-function add_cliente() {
-    $addCliente = document.getElementById('adicionar_cliente');
-    $addEstoque = document.getElementById('adicionar_estoque');
+function porcentagem() {
+    var precoCusto = Number(document.querySelector('#precoCusto').value);
+    var lucro = Number(document.querySelector('#lucro').value);
+    var input = document.querySelector('#precoVenda');
 
-    if ($addCliente.style.display == "flex") {
-        $addCliente.style.display = "none";
-    } else {
-        $addCliente.style.display = "flex";
-        $addEstoque.style.display = "none";
+    let dividir = (parseInt(precoCusto) * parseFloat(lucro)) / 100;
+    var resultado = precoCusto + dividir;
 
-    }
+    input.value = resultado;
+
 }
 
-function add_estoque() {
-    $addEstoque = document.getElementById('adicionar_estoque');
-    $addCliente = document.getElementById('adicionar_cliente');
+function update() {
+    var updatepage = document.querySelector("#containerupdate");
 
-    if ($addEstoque.style.display == "flex") {
-        $addEstoque.style.display = "none";
+    if (updatepage.style.display == "flex") {
+        updatepage.style.display = "none";
     } else {
-        $addEstoque.style.display = "flex";
-        $addCliente.style.display = "none";
+        updatepage.style.display = "flex";
     }
 }

@@ -21,8 +21,14 @@
             <div class="container_section">
                 
                 <section id="cliente" class="height">
-                    <h2>Cliente</h2>
 
+                    <div class="head">
+                    <h2>Cliente</h2>
+                    <div class="quantia">
+                        <img src="https://img.icons8.com/ios-glyphs/256/client-management.png" alt="cliente" >
+                        <strong><?php if($quantiacliente){echo $quantiacliente;}?></strong>
+                    </div>
+</div>
                     <table>
                         <tr id="linha" style="background-color: rgb(71, 71, 71);">
                             <th>Cliente</th>

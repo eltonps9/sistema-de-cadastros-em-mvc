@@ -6,23 +6,30 @@ $router = new Router();
 $router->get('/', 'HomeController@index');
 
 
-$router->post('/adicionarCliente', 'HomeController@adicionarCliente');
-$router->post('/adicionarItem', 'HomeController@adicionarEstoque');
+$router->post('/addCliente', 'AcoesController@adicionarCliente');
+$router->post('/addProduto', 'AcoesController@adicionarEstoque');
 
-$router->get('/deletar/{id}', 'HomeController@deletar');
-$router->get('/delete/{id}', 'HomeController@deletecliente');
+$router->get('/deletar/{id}', 'AcoesController@deletar');
+$router->get('/delete/{id}', 'AcoesController@deletecliente');
 
-$router->get('/updateCliente/{id}', 'HomeController@updateCliente');
-$router->get('/updateItem/{id}', 'HomeController@updateEstoque');
-$router->post('/updateAction_cliente/{id}', 'HomeController@updateAction_cliente');
-$router->post('/updateItem/{id}', 'HomeController@updateAction_item');
+$router->get('/updateCliente/{id}', 'AcoesController@updateCliente');
+$router->post('/updateProduto', 'AcoesController@updateProduto');
+$router->post('/updateAction_cliente/{id}', 'AcoesController@updateAction_cliente');
+$router->post('/updateaction_produtos/{id}', 'AcoesController@updateAction_produto');                        
 
 
-$router->post('/home', 'HomeController@home');
-$router->get('/config', 'HomeController@config');
-$router->get('/tela', 'HomeController@tela');
-$router->get('/clientes', 'HomeController@cliente');
+$router->post('/home', 'LoginController@home');
+$router->get('/cadastro', 'AcoesController@adicionar');
+$router->get('/tela', 'EstoqueController@tela');
+$router->get('/clientes', 'ClienteController@cliente');
+$router->get('/clienteTela', 'ClienteController@clienteView');
+$router->get('/produtoTela', 'EstoqueController@produtosView');
 
 $router->get('/logout', 'HomeController@logout');
-$router->get('/search', 'HomeController@searchView');
-$router->post('/searching', 'HomeController@search');
+$router->get('/search', 'AcoesController@searchView');
+$router->post('/searching', 'AcoesController@search');
+
+$router->get('/relatorioProduto', 'EstoqueController@relatorio');
+
+
+?>
